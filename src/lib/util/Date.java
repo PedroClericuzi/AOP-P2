@@ -6,7 +6,6 @@ import java.util.GregorianCalendar;
 
 import lib.exceptions.InvalidDateException;
 
-
 public class Date implements Serializable {
 	private int dia;
 
@@ -50,8 +49,7 @@ public class Date implements Serializable {
 		validaData(dia, mes, ano);
 	}
 
-	public Date(int segundo, int minuto, int hora, int dia, int mes, int ano)
-			throws InvalidDateException {
+	public Date(int segundo, int minuto, int hora, int dia, int mes, int ano) throws InvalidDateException {
 		try {
 			this.dia = dia;
 			this.mes = mes;
@@ -78,8 +76,8 @@ public class Date implements Serializable {
 		validaData(dia, mes, ano);
 	}
 
-	public Date(String segundoStr, String minutoStr, String horaStr, String diaStr, String mesStr,
-			String anoStr) throws InvalidDateException {
+	public Date(String segundoStr, String minutoStr, String horaStr, String diaStr, String mesStr, String anoStr)
+			throws InvalidDateException {
 		try {
 			this.dia = Integer.parseInt(diaStr);
 			this.mes = Integer.parseInt(mesStr);
@@ -178,7 +176,7 @@ public class Date implements Serializable {
 	}
 
 	/**
-	 * Defini��o do M�todo
+	 * Definicao do metodo
 	 * 
 	 * 
 	 * @param data
@@ -223,7 +221,8 @@ public class Date implements Serializable {
 		diferDia = dia2 - dia;
 		diferMes = mes2 - mes;
 		diferAno = ano2 - ano;
-		diferenca = (diferSegundo + 60 * (diferMinuto + 60 * (diferHora + 24 * (diferDia + 30 * (diferMes + 12 * diferAno)))));
+		diferenca = (diferSegundo
+				+ 60 * (diferMinuto + 60 * (diferHora + 24 * (diferDia + 30 * (diferMes + 12 * diferAno)))));
 
 		return diferenca;
 	}
@@ -255,7 +254,8 @@ public class Date implements Serializable {
 
 		calendar.set(data.getAno() - 1900, data.getMes(), data.getDia());
 
-		// calendar.setTime(new Date(data.getAno()-1900,data.getMes(),data.getDia()));
+		// calendar.setTime(new
+		// Date(data.getAno()-1900,data.getMes(),data.getDia()));
 		// calendar.setTime(new Date());
 		diaDaSemana = calendar.get(Calendar.DAY_OF_WEEK);
 
@@ -280,9 +280,8 @@ public class Date implements Serializable {
 	}
 
 	/**
-	 * Retorna a representa��o string da data,
-	 * recebe como par�metro um constante inteira que representa
-	 * o formato data
+	 * Retorna a representa��o string da data, recebe como par�metro um
+	 * constante inteira que representa o formato data
 	 */
 	public static String format(Date data, int formato) {
 		String diaStr = "", mesStr = "", anoStr = "";
@@ -494,9 +493,8 @@ public class Date implements Serializable {
 	}
 
 	/**
-	 * Transforma string em data.
-	 * recebe como par�metro o String e assume
-	 * / como o separador utilizado.
+	 * Transforma string em data. recebe como par�metro o String e assume /
+	 * como o separador utilizado.
 	 */
 	public static Date stringToData(String dataStr, int formato) throws InvalidDateException {
 		String diaStr, mesStr, anoStr;
@@ -564,8 +562,8 @@ public class Date implements Serializable {
 	}
 
 	/**
-	 * Valida uma data (dia, mes e ano), caso algum dos valores seja
-	 * inv�lido, lan�a a exce��o InvalidDateException
+	 * Valida uma data (dia, mes e ano), caso algum dos valores seja inv�lido,
+	 * lan�a a exce��o InvalidDateException
 	 */
 	private void validaData(int dia, int mes, int ano) throws InvalidDateException {
 		if (1 == 2) {
@@ -580,8 +578,7 @@ public class Date implements Serializable {
 	public static void main(String args[]) {
 		try {
 			Calendar agora = Calendar.getInstance();
-			Date d = new Date(agora.get(Calendar.DAY_OF_MONTH), agora.get(Calendar.MONTH), agora
-					.get(Calendar.YEAR));
+			Date d = new Date(agora.get(Calendar.DAY_OF_MONTH), agora.get(Calendar.MONTH), agora.get(Calendar.YEAR));
 			System.out.println(d.toString());
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());

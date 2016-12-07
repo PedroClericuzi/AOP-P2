@@ -1,9 +1,10 @@
 package healthwatcher.model.complaint;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DiseaseType implements java.io.Serializable {
+public class DiseaseType implements Serializable {
 
 	private int code;
 
@@ -21,8 +22,7 @@ public class DiseaseType implements java.io.Serializable {
 		symptoms = new ArrayList();
 	}
 
-	public DiseaseType(String name, String description, String manifestation, String duration,
-			List symptoms) {
+	public DiseaseType(String name, String description, String manifestation, String duration, List symptoms) {
 
 		this.name = name;
 		this.description = description;

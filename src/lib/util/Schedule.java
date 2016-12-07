@@ -5,7 +5,6 @@ import java.util.GregorianCalendar;
 
 import lib.exceptions.InvalidDateException;
 
-
 public class Schedule {
 
 	private int segundo;
@@ -42,8 +41,7 @@ public class Schedule {
 		validaHorario(segundo, minuto, hora);
 	}
 
-	public Schedule(String segundoStr, String minutoStr, String horaStr)
-			throws InvalidDateException {
+	public Schedule(String segundoStr, String minutoStr, String horaStr) throws InvalidDateException {
 
 		try {
 			this.segundo = Integer.parseInt(segundoStr);
@@ -82,16 +80,16 @@ public class Schedule {
 	}
 
 	/**
-	 * Retorna a representação string da hora que foi recebida
-	 * como parâmetro no formato representado pela constante formato.
+	 * Retorna a representação string da hora que foi recebida como parâmetro no
+	 * formato representado pela constante formato.
 	 */
 	public String format(int formato) {
 		return format(this, formato);
 	}
 
 	/**
-	 * Retorna a representação string da hora que foi recebida
-	 * como parâmetro no formato representado pela constante formato.
+	 * Retorna a representação string da hora que foi recebida como parâmetro no
+	 * formato representado pela constante formato.
 	 */
 	public static String format(Schedule horario, int formato) {
 
@@ -172,11 +170,10 @@ public class Schedule {
 	}
 
 	/**
-	 * Transforma string em data.
-	 * recebe como parâmetro o String e o separador utilizado.
+	 * Transforma string em data. recebe como parâmetro o String e o separador
+	 * utilizado.
 	 */
-	public static Schedule stringToHorario(String horarioStr, int formato)
-			throws InvalidDateException {
+	public static Schedule stringToHorario(String horarioStr, int formato) throws InvalidDateException {
 
 		String segundoStr = null, minutoStr = null, horaStr = null;
 		Schedule horario = null;
@@ -210,8 +207,8 @@ public class Schedule {
 	}
 
 	/**
-	 * Valida uma data (dia, mes e ano), caso algum dos valores seja
-	 * inválido lança a exceção DataInvalidaException
+	 * Valida uma data (dia, mes e ano), caso algum dos valores seja inválido
+	 * lança a exceção DataInvalidaException
 	 */
 	private void validaHorario(int segundo, int minuto, int hora) throws InvalidDateException {
 

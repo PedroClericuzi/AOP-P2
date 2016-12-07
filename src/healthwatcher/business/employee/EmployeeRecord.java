@@ -23,8 +23,8 @@ public class EmployeeRecord {
 		return employeeRepository.search(login);
 	}
 
-	public void insert(Employee employee) throws ObjectNotValidException,
-			ObjectAlreadyInsertedException, ObjectNotValidException, RepositoryException {
+	public void insert(Employee employee) throws ObjectNotValidException, ObjectAlreadyInsertedException,
+			ObjectNotValidException, RepositoryException {
 		manager.beginExecution(employee.getLogin());
 		if (employeeRepository.exists(employee.getLogin())) {
 			throw new ObjectAlreadyInsertedException(ExceptionMessages.EXC_JA_EXISTE);
@@ -34,8 +34,8 @@ public class EmployeeRecord {
 		manager.endExecution(employee.getLogin());
 	}
 
-	public void update(Employee employee) throws ObjectNotValidException, ObjectNotFoundException,
-			ObjectNotValidException, RepositoryException {
+	public void update(Employee employee)
+			throws ObjectNotValidException, ObjectNotFoundException, ObjectNotValidException, RepositoryException {
 		employeeRepository.update(employee);
 	}
 }

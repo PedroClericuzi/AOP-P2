@@ -1,6 +1,8 @@
 package healthwatcher.model.healthguide;
 
-public class MedicalSpeciality implements java.io.Serializable {
+import java.io.Serializable;
+
+public class MedicalSpeciality implements Serializable {
 
 	private int codigo;
 
