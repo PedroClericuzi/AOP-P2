@@ -18,14 +18,13 @@ public class AnimalComplaint extends Complaint {
 	public AnimalComplaint() {
 	}
 
-	public AnimalComplaint(String solicitante, String descricao, String observacao, String email,
-			Employee atendente, int situacao, Date dataParecer, Date dataQueixa,
-			Address enderecoSolicitante, short animalQuantity, Date inconvenienceDate,
-			String animal, Address occurenceLocalAddress) {
+	public AnimalComplaint(String solicitante, String descricao, String observacao, String email, Employee atendente,
+			int situacao, Date dataParecer, Date dataQueixa, Address enderecoSolicitante, short animalQuantity,
+			Date inconvenienceDate, String animal, Address occurenceLocalAddress) {
 
 		// inicializar tipo da queixa
-		super(solicitante, descricao, observacao, email, atendente, situacao, dataParecer,
-				dataQueixa, enderecoSolicitante, 0);
+		super(solicitante, descricao, observacao, email, atendente, situacao, dataParecer, dataQueixa,
+				enderecoSolicitante, 0);
 
 		this.animalQuantity = animalQuantity;
 		this.inconvenienceDate = inconvenienceDate;

@@ -20,18 +20,18 @@ public class FoodComplaint extends Complaint {
 
 	private Address enderecoDoente;
 
-	//construtor vazio
+	// construtor vazio
 	public FoodComplaint() {
 	}
 
-	public FoodComplaint(String solicitante, String descricao, String observacao, String email,
-			Employee atendente, int situacao, Date dataParecer, Date dataQueixa,
-			Address enderecoSolicitante, int qtdeComensais, int qtdeDoentes, int qtdeInternacoes,
-			int qtdeObitos, String localAtendimento, String refeicaoSuspeita, Address enderecoDoente) {
+	public FoodComplaint(String solicitante, String descricao, String observacao, String email, Employee atendente,
+			int situacao, Date dataParecer, Date dataQueixa, Address enderecoSolicitante, int qtdeComensais,
+			int qtdeDoentes, int qtdeInternacoes, int qtdeObitos, String localAtendimento, String refeicaoSuspeita,
+			Address enderecoDoente) {
 
-		//inicializar tipo da queixa
-		super(solicitante, descricao, observacao, email, atendente, situacao, dataParecer,
-				dataQueixa, enderecoSolicitante, 0);
+		// inicializar tipo da queixa
+		super(solicitante, descricao, observacao, email, atendente, situacao, dataParecer, dataQueixa,
+				enderecoSolicitante, 0);
 
 		this.qtdeComensais = qtdeComensais;
 		this.qtdeDoentes = qtdeDoentes;
