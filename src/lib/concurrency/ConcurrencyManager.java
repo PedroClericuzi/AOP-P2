@@ -38,7 +38,6 @@ public class ConcurrencyManager {
 			System.out.println(ERROR_MESSAGE + ex.getMessage());
 		} finally {
 			notifyAll();
-
 		}
 	}
 }
