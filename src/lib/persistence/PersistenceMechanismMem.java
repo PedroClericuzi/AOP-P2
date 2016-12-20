@@ -4,16 +4,6 @@ import lib.exceptions.PersistenceMechanismException;
 import lib.exceptions.TransactionException;
 
 public class PersistenceMechanismMem implements IPersistenceMechanism {
-
-	private static PersistenceMechanismMem singleton;
-
-	public static synchronized PersistenceMechanismMem getInstance() throws PersistenceMechanismException {
-		if (singleton == null) {
-			singleton = new PersistenceMechanismMem();
-		}
-		return singleton;
-	}
-
 	public void connect() throws PersistenceMechanismException {
 		// TODO Auto-generated method stub
 
