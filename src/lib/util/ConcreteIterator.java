@@ -1,8 +1,9 @@
 package lib.util;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class ConcreteIterator implements LocalIterator, java.io.Serializable {
+public class ConcreteIterator implements LocalIterator, Serializable {
 
 	private List list = null;
 	private int index = -1;
