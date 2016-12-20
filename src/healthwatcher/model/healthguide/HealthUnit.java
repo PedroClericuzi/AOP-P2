@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 
-public class HealthUnit implements Serializable {
+public class HealthUnit {
 
 	private int code;
 

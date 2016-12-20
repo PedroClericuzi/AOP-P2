@@ -41,34 +41,6 @@ public class HealthWatcherFacadeInit {
 	private EmployeeRecord employeeRecord;
 
 	public HealthWatcherFacadeInit() {
-
-		this.complaintRecord = new ComplaintRecord(new ComplaintRepositoryArray());
-		if (Constants.isPersistent()) {
-			this.complaintRecord = new ComplaintRecord(
-					new ComplaintRepositoryRDB((PersistenceMechanism) HealthWatcherFacade.getPm()));
-		}
-		this.healthUnitRecord = new HealthUnitRecord(new HealthUnitRepositoryArray());
-		if (Constants.isPersistent()) {
-			this.healthUnitRecord = new HealthUnitRecord(
-					new HealthUnitRepositoryRDB((PersistenceMechanism) HealthWatcherFacade.getPm()));
-		}
-		this.specialityRecord = new MedicalSpecialityRecord(new SpecialityRepositoryArray());
-		if (Constants.isPersistent()) {
-			this.specialityRecord = new MedicalSpecialityRecord(
-					new SpecialityRepositoryRDB((PersistenceMechanism) HealthWatcherFacade.getPm()));
-		}
-		DiseaseTypeRepositoryArray tp = new DiseaseTypeRepositoryArray();
-		this.diseaseRecord = new DiseaseRecord(tp);
-		if (Constants.isPersistent()) {
-			this.diseaseRecord = new DiseaseRecord(
-					new DiseaseTypeRepositoryRDB((PersistenceMechanism) HealthWatcherFacade.getPm()));
-		}
-		EmployeeRepositoryArray er = new EmployeeRepositoryArray();
-		this.employeeRecord = new EmployeeRecord(er);
-		if (Constants.isPersistent()) {
-			this.employeeRecord = new EmployeeRecord(
-					new EmployeeRepositoryRDB((PersistenceMechanism) HealthWatcherFacade.getPm()));
-		}
 	}
 
 	public void updateHealthUnit(HealthUnit unit)

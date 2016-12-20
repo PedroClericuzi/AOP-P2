@@ -41,17 +41,13 @@ public class Schedule {
 		validaHorario(segundo, minuto, hora);
 	}
 
-	public Schedule(String segundoStr, String minutoStr, String horaStr) throws InvalidDateException {
-
-		try {
-			this.segundo = Integer.parseInt(segundoStr);
-			this.minuto = Integer.parseInt(minutoStr);
-			this.hora = Integer.parseInt(horaStr);
-
-			validaHorario(segundo, minuto, hora);
-		} catch (NumberFormatException ne) {
-			throw new InvalidDateException(segundo, minuto, hora);
-		}
+	public Schedule(String segundoStr, String minutoStr, String horaStr)
+			throws InvalidDateException {
+		this.segundo = Integer.parseInt(segundoStr);
+		this.minuto = Integer.parseInt(minutoStr);
+		this.hora = Integer.parseInt(horaStr);
+		
+		validaHorario(segundo, minuto, hora);
 	}
 
 	public int compara(Schedule horario) {

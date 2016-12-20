@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DiseaseType implements Serializable {
+public class DiseaseType {
 
 	private int code;
 
