@@ -1,9 +1,10 @@
 package healthwatcher.model.healthguide;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.List;
 
-public class HealthUnit implements java.io.Serializable {
+public class HealthUnit {
 
 	private int code;
 
@@ -20,7 +21,7 @@ public class HealthUnit implements java.io.Serializable {
 	}
 
 	public boolean hasSpeciality(int code) {
-		for(Iterator i = specialities.iterator(); i.hasNext();) {
+		for (Iterator i = specialities.iterator(); i.hasNext();) {
 			MedicalSpeciality m = (MedicalSpeciality) i.next();
 			if (m.getCodigo() == code) {
 				return true;
@@ -28,7 +29,7 @@ public class HealthUnit implements java.io.Serializable {
 		}
 		return false;
 	}
-	
+
 	public int getCode() {
 		return this.code;
 	}
